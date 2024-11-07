@@ -40,7 +40,7 @@ In `android/app/build.gradle`
 ```gradle
 dependencies {
     ...
-    compile project(':@barryhieu_react-native-background-geolocation')
+    implementation project(':@barryhieu_react-native-background-geolocation')
     ...
 }
 ```
