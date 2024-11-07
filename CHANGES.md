@@ -2,7 +2,7 @@
 
 ### [0.7.2] - 2022-05-23
 
-- Repo updated - https://www.npmjs.com/package/@mak12/react-native-background-geolocation
+- Repo updated - https://www.npmjs.com/package/@barryhieu/react-native-background-geolocation
 - Calling JS function after bridge has been destroyed fix
 
 ### [0.7.0] - 2022-05-23
