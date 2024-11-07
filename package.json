@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/barryhieu/react-native-background-geolocation#readme",
   "dependencies": {
-    "@barryhieu/react-native-background-geolocation": "^0.7.5",
+    "@barryhieu/react-native-background-geolocation": "^0.7.7",
     "plist": "^3.0.1"
   },
   "peerDependencies": {
