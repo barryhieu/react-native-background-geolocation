@@ -32,7 +32,6 @@ def hasApp = findProject(':app') != null
 // https://hackernoon.com/android-how-to-add-gradle-dependencies-using-foreach-c4cbcc070458
 def projDependencies = [
     [configuration: "implementation", dependency: libs.slf4j],
-    [configuration: "implementation", dependency: libs.reactNative],
     [configuration: "testImplementation", dependency: testLibs.testRunner],
     [configuration: "testImplementation", dependency: testLibs.testRules],
     [configuration: "testImplementation", dependency: testLibs.junit],
