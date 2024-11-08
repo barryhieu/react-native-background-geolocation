@@ -2,11 +2,12 @@ package com.marianhello.bgloc.react.headless;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
 import com.facebook.react.HeadlessJsTaskService;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
+
+import org.jetbrains.annotations.Nullable;
 
 public class HeadlessService extends HeadlessJsTaskService {
     public final String TASK_KEY = "com.marianhello.bgloc.react.headless.Task";
