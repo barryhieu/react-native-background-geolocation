@@ -1,6 +1,7 @@
 package com.marianhello.bgloc.react;
 
 import android.content.Context;
+import com.facebook.react.bridge.ReactMethod;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;

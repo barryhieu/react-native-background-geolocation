@@ -25,6 +25,7 @@
 // their templates.
 
 apply plugin: 'com.android.library'
+// apply plugin: "com.facebook.react"
 
 apply from: '../common/VERSIONS.gradle'
 def hasApp = findProject(':app') != null
@@ -32,6 +33,7 @@ def hasApp = findProject(':app') != null
 // https://hackernoon.com/android-how-to-add-gradle-dependencies-using-foreach-c4cbcc070458
 def projDependencies = [
     [configuration: "implementation", dependency: libs.slf4j],
+    [configuration: "implementation", dependency: libs.reactNative],
     [configuration: "testImplementation", dependency: testLibs.testRunner],
     [configuration: "testImplementation", dependency: testLibs.testRules],
     [configuration: "testImplementation", dependency: testLibs.junit],
@@ -51,7 +53,7 @@ repositories {
     maven {
         url 'https://maven.google.com'
     }
-    jcenter()
+    mavenCentral()
 }
 
 android {
