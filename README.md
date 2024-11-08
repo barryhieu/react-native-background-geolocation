@@ -45,28 +45,6 @@ dependencies {
 }
 ```
 
-Register the module (in `MainApplication.java`)
-
-```java
-import com.marianhello.bgloc.react.BackgroundGeolocationPackage;  // <--- Import Package
-
-public class MainApplication extends Application implements ReactApplication {
-  ...
-  /**
-   * A list of packages used by the app. If the app uses additional views
-   * or modules besides the default ones, add more packages here.
-   */
-  @Override
-  protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-          new BackgroundGeolocationPackage() // <---- Add the Package
-      );
-  }
-  ...
-}
-```
-
 #### iOS setup
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
@@ -83,19 +61,6 @@ For iOS 11:
 
 6. Add `NSLocationWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
 7. Add `NSLocationAlwaysAndWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
-
-## Submitting issues
-
-All new issues should follow instructions in [ISSUE_TEMPLATE.md](https://raw.githubusercontent.com/mauron85/react-native-background-geolocation/master/ISSUE_TEMPLATE.md).
-A properly filled issue report will significantly reduce number of follow up questions and decrease issue resolving time.
-Most issues cannot be resolved without debug logs. Please try to isolate debug lines related to your issue.
-Instructions for how to prepare debug logs can be found in section [Debugging](#debugging).
-If you're reporting an app crash, debug logs might not contain all the necessary information about the cause of the crash.
-In that case, also provide relevant parts of output of `adb logcat` command.
-
-## Issue Hunt
-
-Fund your issues or feature request to drag attraction of developers. Checkout our [issue hunt page](https://issuehunt.io/r/mauron85/react-native-background-geolocation/issues).
 
 # Android background service issues
 
@@ -129,32 +94,7 @@ See [Which provider should I use?](/PROVIDERS.md) for more information about pro
 Versions of libraries and sdk versions used to compile this plugin can be overriden in
 `android/build.gradle` with ext declaration.
 
-When ext is not provided then following defaults will be used:
-
-```
-ext {
-  compileSdkVersion = 28
-  buildToolsVersion = "28.0.3"
-  targetSdkVersion = 28
-  minSdkVersion = 16
-  supportLibVersion = "28.0.0"
-  googlePlayServicesVersion = "11+"
-}
-```
-
 ## Compatibility
-
-Due to the rapid changes being made in the React Native ecosystem, this module will support
-only the latest version of React Native. Older versions will only be supported if they're
-compatible with this module.
-
-| Module        | React Native |
-| ------------- | ------------ |
-| 0.1.0 - 0.2.0 | 0.33         |
-| >=0.3.0       | >=0.47       |
-| >=0.6.0       | >=0.60       |
-
-If you are using an older version of React Native with this module some features may be buggy.
 
 If you are using `react-native-maps` or another lib that requires `Google Play Services` such as `Exponent.js`, then in addition to the instalation steps described here, you must set `Google Play Services` library version to match the version used by those libraries. (in this case `9.8.0`)
 
@@ -782,12 +722,6 @@ Add string resource "account_name" into "android/app/src/main/res/values/strings
 [Background-geolocation-server](https://github.com/mauron85/background-geolocation-server) is a backend server written in nodejs with CORS - Cross-Origin Resource Sharing support.
 There are instructions how to run it and simulate locations on Android, iOS Simulator and Genymotion.
 
-## Debugging
-
-## Submit crash log
-
-TODO
-
 ## Debugging sounds
 
 | Event                               | _ios_                             | _android_               |
@@ -800,13 +734,3 @@ TODO
 | Stationary location acquired sound  | "bloom" sound                     | long tt beep            |
 
 **NOTE:** For iOS in addition, you must manually enable the _Audio and Airplay_ background mode in _Background Capabilities_ to hear these debugging sounds.
-
-## Geofencing
-
-Try using [react-native-boundary](https://github.com/eddieowens/react-native-boundary). Let's keep this plugin lightweight as much as possible.
-
-## Changelog
-
-See [CHANGES.md](/CHANGES.md)
-
-See [变更（非官方中文版）](/CHANGES_zh-Hans.md)
