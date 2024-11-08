@@ -11,17 +11,6 @@
 yarn add @barryhieu/react-native-background-geolocation
 ```
 
-### Automatic setup
-
-Since version 0.60 React Native does linking of modules [automatically](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). However it does it only for single module.
-As plugin depends on additional 'common' module, it is required to link it with:
-
-```
-node ./node_modules/@barryhieu/react-native-background-geolocation/scripts/postlink.js
-```
-
-### Manual setup
-
 #### Android setup
 
 In `android/settings.gradle`
@@ -35,14 +24,10 @@ project(':@barryhieu_react-native-background-geolocation').projectDir = new File
 ...
 ```
 
-In `android/app/build.gradle`
+#### Common Android and iOS setup
 
-```gradle
-dependencies {
-    ...
-    implementation project(':@barryhieu_react-native-background-geolocation')
-    ...
-}
+```
+node ./node_modules/@barryhieu/react-native-background-geolocation/scripts/postlink.js
 ```
 
 #### iOS setup
