@@ -32,20 +32,11 @@ node ./node_modules/@barryhieu/react-native-background-geolocation/scripts/postl
 
 #### iOS setup
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Add `./node_modules/@barryhieu/react-native-background-geolocation/ios/RCTBackgroundGeolocation.xcodeproj`
-3. In the XCode project navigator, select your project, select the `Build Phases` tab and in the `Link Binary With Libraries` section add **libRCTBackgroundGeolocation.a**
-4. Add `UIBackgroundModes` **location** to `Info.plist`
-5. Add `NSMotionUsageDescription` **App requires motion tracking** to `Info.plist` (required by ACTIVITY_PROVIDER)
-
-For iOS before version 11:
-
-6. Add `NSLocationAlwaysUsageDescription` **App requires background tracking** to `Info.plist`
-
-For iOS 11:
-
-6. Add `NSLocationWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
-7. Add `NSLocationAlwaysAndWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
+1. Add `UIBackgroundModes` **location** to `Info.plist`
+2. Add `NSMotionUsageDescription` **App requires motion tracking** to `Info.plist` (required by ACTIVITY_PROVIDER)
+3. Add `NSLocationAlwaysUsageDescription` **App requires background tracking** to `Info.plist`
+4. Add `NSLocationWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
+5. Add `NSLocationAlwaysAndWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
 
 # Android background service issues
 
@@ -76,10 +67,10 @@ See [Which provider should I use?](/PROVIDERS.md) for more information about pro
 
 ## Dependencies
 
-Versions of libraries and sdk versions used to compile this plugin can be overriden in
+Versions of libraries and sdk versions used to compile this plugin can be overridden in
 `android/build.gradle` with ext declaration.
 
-## Compatibility
+## (Optional) Compatibility
 
 If you are using `react-native-maps` or another lib that requires `Google Play Services` such as `Exponent.js`, then in addition to the instalation steps described here, you must set `Google Play Services` library version to match the version used by those libraries. (in this case `9.8.0`)
 
