@@ -34,17 +34,7 @@ def hasApp = findProject(':app') != null
 def projDependencies = [
     [configuration: "implementation", dependency: libs.slf4j],
     [configuration: "implementation", dependency: libs.reactNative],
-    [configuration: "testImplementation", dependency: testLibs.testRunner],
-    [configuration: "testImplementation", dependency: testLibs.testRules],
-    [configuration: "testImplementation", dependency: testLibs.junit],
-    [configuration: "testImplementation", dependency: testLibs.powermockMockito],
-    [configuration: "testImplementation", dependency: testLibs.powermockjUnit],
-    [configuration: "testImplementation", dependency: testLibs.powermockClassloading],
-    [configuration: "testImplementation", dependency: testLibs.mockitoCore],
-    [configuration: "testImplementation", dependency: testLibs.festAssertCore],
-    [configuration: "testImplementation", dependency: testLibs.robolectric],
-    [configuration: "androidTestImplementation", dependency: testLibs.testRunner],
-    [configuration: "androidTestImplementation", dependency: testLibs.testRules],
+ 
 ]
 
 repositories {
