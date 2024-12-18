@@ -76,6 +76,8 @@ dependencies {
     implementation project(path: ':@barryhieu_react-native-background-geolocation-common')
     implementation 'org.jetbrains:annotations:24.0.1'
     implementation 'org.jetbrains:annotations:24.0.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
+
 
     projDependencies.each {
         add(it.configuration, it.dependency)
